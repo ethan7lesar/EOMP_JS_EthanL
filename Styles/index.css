@@ -99,3 +99,14 @@ ul{
 .admin-btn{
   color: #192a51 !important;
 }
+
+@media screen and (max-width: 300px) {
+  .card-img-top{
+    width: 75% !important;
+    height: 75% !important;
+  }
+
+  .contact-text{
+    display: none !important;
+  }
+}
