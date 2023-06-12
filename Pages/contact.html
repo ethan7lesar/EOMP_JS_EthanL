@@ -1,13 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Styles/contact.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Styles/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+
     <title>Contact</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav class="navbar sticky-top bg-body-tertiary p-0">
+        <div class="container-fluid NAV">
+          <a class="navbar-brand" href="/index.html">
+            <img
+              src="/EOMP Images/Grey Matter.png"
+              alt="Logo"
+              width="50px"
+              height="50px"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <ul class="nav justify-content-center align-text-center mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Pages/products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Pages/contact.html">Contact</a>
+            </li>
+          </ul>
+          <a href="/Pages/products.html"
+            ><svg fill="#F5E6E8" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55px" height="55px" viewBox="-90.29 -90.29 1083.44 1083.44" xml:space="preserve" stroke="#F5E6E8" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M671.504,577.829l110.485-432.609H902.86v-68H729.174L703.128,179.2L0,178.697l74.753,399.129h596.751V577.829z M685.766,247.188l-67.077,262.64H131.199L81.928,246.756L685.766,247.188z"></path> <path d="M578.418,825.641c59.961,0,108.743-48.783,108.743-108.744s-48.782-108.742-108.743-108.742H168.717 c-59.961,0-108.744,48.781-108.744,108.742s48.782,108.744,108.744,108.744c59.962,0,108.743-48.783,108.743-108.744 c0-14.4-2.821-28.152-7.927-40.742h208.069c-5.107,12.59-7.928,26.342-7.928,40.742 C469.675,776.858,518.457,825.641,578.418,825.641z M209.46,716.897c0,22.467-18.277,40.744-40.743,40.744 c-22.466,0-40.744-18.277-40.744-40.744c0-22.465,18.277-40.742,40.744-40.742C191.183,676.155,209.46,694.432,209.46,716.897z M619.162,716.897c0,22.467-18.277,40.744-40.743,40.744s-40.743-18.277-40.743-40.744c0-22.465,18.277-40.742,40.743-40.742 S619.162,694.432,619.162,716.897z"></path> </g> </g> </g></svg></a
+          >
+        </div>
+      </nav>
+
+    <main>
+        <div class="card m-2 p-3 contact mx-auto">
+            <form action="https://formspree.io/f/xqkorznj" method="POST">
+            <h1 class="card p-3 text-center heading-text">Contact Us</h1>
+            <div class="mb-3 text-center">
+                <label class="form-label"> Full Name: </label>
+                <input type="text" class="form-control border-2" name="Name" placeholder="Your Full Name" required />
+            </div>
+            
+            <div class="mb-3 text-center">
+                <label class="form-label"> Email: </label>
+                <input type="email" class="form-control border-2" name="Email" placeholder="Valid Email Address" required />
+            </div>
+            
+            <div class="mb-3 text-center">
+                <label class="form-label"> Contact Number: </label>
+                <input type="tel" class="form-control border-2" name="Contact" placeholder="Mobile / Telephone Number" required/>
+            </div>
+            
+            <div class="mb-3 text-center">
+                <label class="form-label"> Leave Us a Message: </label>
+                <textarea name="message" class="form-control border-2" rows="5" ></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-outline-danger text-center btn-submit">Submit</button>
+        </form>
+    </div>
+    </main>
+    <footer>
+        <div class="container-fluid nav-bottom d-flex justify-content-between">
+          <div class="mt-4">
+            <h5>Contact</h5>
+            <ul class="list-s">
+              <li >email: ethanlesar11@gmail.com </li>
+              <li>Call: 0744661587</li>
+            </ul>
+          </div>
+          <div class="Copyright-container mt-5 ">
+            <p>@Copyright Grey Matter 2023 by Ethan Lesar</p>
+            <div class="d-flex justify-content-center   ">
+              <i class="fa-brands fa-instagram px-3 fa-2xl" style="color: #192a51;"></i>
+              <i class="fa-brands fa-facebook px-3 fa-2xl" style="color: #192a51;"></i>
+              <i class="fa-brands fa-linkedin px-3 fa-2xl" style="color: #192a51;"></i>
+              <i class="fa-brands fa-tiktok px-3 fa-2xl" style="color: #192a51;"></i>
+            </div>
+          </div>
+          <div class="admin mt-5">
+            <a href="/Pages/admin.html"
+              ><div class="btn admin-btn">Admin</div></a
+            >
+          </div>
+        </div>
+      </footer>
+    <script src="https://kit.fontawesome.com/850ca6a355.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
