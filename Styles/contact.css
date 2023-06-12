@@ -82,3 +82,34 @@ textarea{
     border: none !important;
     border-radius: 0 !important;
 }
+
+@media screen and (max-width: 300px) {
+    .card-img-top{
+      width: 75% !important;
+      height: 75% !important;
+    }
+  
+    .contact-text{
+      display: none !important;
+    }
+  
+    ul{
+      display: none !important;
+    }
+    .navbar-toggler{
+      display: inline !important;
+       color: #F5E6E8 !important;
+    }
+  
+  .d-inline-block.align-text-top.Logo{
+    display: none !important;  
+    }
+    .hero-text{
+      font-size: 40px !important;
+    }
+    .hero-btn{
+      font-size: 30px !important;
+    }
+  
+    
+  }
