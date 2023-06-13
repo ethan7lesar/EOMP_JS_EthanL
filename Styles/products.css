@@ -78,12 +78,39 @@ a{
   .modal-content{
     background-color: #967aa1 !important;
     color: #F5E6E8 !important;
+    border: none
+    !important;
+    border-radius: 0 !important;
   }
 
   .rembutton{
     background-color: #192a51 !important;
     color: #f5e6e8 !important;
   } 
+  .modal{
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  .Filter{
+    position: relative !important;
+    left: 35%!important;
+    
+    color: #f5e6e8;
+    border-radius: 0 !important;
+    border: none
+  }
+  .category-button{
+    background-color: #192a51 !important;
+    color: #f5e6e8 !important;
+    border: none !important;
+  }
+  .All-btn{
+    background-color: #192a51 !important;
+    color: #f5e6e8 !important;
+    border: none !important;
+  }
+  
 
 
 @media screen and (max-width: 300px) {

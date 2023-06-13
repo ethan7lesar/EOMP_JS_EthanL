@@ -67,14 +67,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Added Items</h4>
-                    <button type="button"  class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button"  class="btn" data-bs-dismiss="modal">Close</button>
                 </div>
                 <div id="cart-body">
                     <div id="results"><h5>Total</h5></div>
                     
                 </div>
                 <div class="modal-footer">
-                    <button class="checkout-btn">Checkout</button>
+                    <button class="checkout-btn" onclick="checkout()">Checkout</button>
                     <p>Total: <span id="total"></span></p>
                 </div>
             </div>
@@ -83,13 +83,26 @@
       <main>
     </div>
     <h1 class="text-center">Products :</h1> 
-    <select class="text-center justify-content-center align-text-center ">
-        <option value="rolex">Rolex</option>
+    <!-- <select class="text-center caterory ">
+        <option value="rolex" data-category="rolex">Rolex</option>
         <option value="AP">Audemars Pigue</option>
         <option value="RM">Richard Mille</option>
         <option value="PP">Patek Phillipe</option>
-    </select>
-    <div class="p-3 row row-cols-4 mx-auto" id="products">
+    </select> -->
+    
+    <div class="Filter">
+  <h6>
+    Filter:
+  </h6>
+  <button class="All-btn" onclick="displayProducts(products);
+  " >All</button>
+<button class="category-button" data-category="rolex">Rolex</button>
+<button class="category-button" data-category="rm">Richard Mille</button>
+<button class="category-button" data-category="AP">Audemars Piguet</button>
+<button class="category-button" data-category="PP">Patek Philippe</button>
+</div>
+
+    <div class="p-3 row row-cols-4 mx-auto row-cols-sm-2" id="products">
 </div>
 <div id="cart-container">
     <div id="cart-body"></div>

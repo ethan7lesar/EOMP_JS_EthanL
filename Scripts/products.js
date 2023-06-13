@@ -75,7 +75,7 @@ const products = [
       id: 9,
       catergory: "AP",
       Image: "https://i.postimg.cc/bv502wQN/standup-png-transform-approductmain.png",
-      name: `AP Royal Oak Open Works "Rainbow"`,
+      name: `AP Royal Oak Open Works`,
       price: `2500000`,
       quantity: 5,
     },
@@ -140,8 +140,9 @@ const products = [
     },
   ];
   
-  function displayProducts() {
+  function displayProducts(products) {
     const ourProducts = document.getElementById("products");
+    ourProducts.innerHTML = ""; 
     products.forEach((product) => {
       const productElement = document.createElement("div");
       productElement.innerHTML = `
@@ -156,6 +157,20 @@ const products = [
       ourProducts.appendChild(productElement);
     });
   }
+
+  function sortProductsByCategory(category) {
+    const sortedProducts = products.filter((product) => product.catergory === category);
+    displayProducts(sortedProducts);
+  }
+  
+  const categoryButtons = document.querySelectorAll(".category-button");
+
+categoryButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const category = event.target.dataset.category;
+    sortProductsByCategory(category);
+  });
+});
   
   let cart = JSON.parse(localStorage.getItem("Products")) || [];
   
@@ -205,7 +220,20 @@ const products = [
     totalElement.textContent = `$${total}`;
   }
   
-  displayProducts();
+  function checkout() {
+    const modalFooter = document.querySelector(".modal-footer");
+    modalFooter.innerHTML = `
+    <div class="tick-animation" >
+        <p>Checkout successful!</p>
+      </div>
+    `;
+    cart = [];
+    updateCart();
+  }
+
+
+
+  displayProducts(products);
   
   updateCart();
   
