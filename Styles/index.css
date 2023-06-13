@@ -55,6 +55,7 @@ body {
 
 footer {
   background-color: #d5c6e0 !important;
+  color: #192a51 !important;
 }
 
 i{
@@ -62,7 +63,7 @@ i{
     height: 50px !important;
 }
 
-.c
+
 
 .admin{
     display: flex ;
