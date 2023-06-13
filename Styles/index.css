@@ -94,9 +94,6 @@ a{
   text-decoration: none !important;
 }
 
-ul{
-  list-style: none !important;
-}
 
 .admin-btn{
   color: #192a51 !important;
@@ -107,6 +104,9 @@ ul{
 }
 
 @media screen and (max-width: 300px) {
+  ul{
+    list-style: none !important;
+  }
   .card-img-top{
     width: 75% !important;
     height: 75% !important;
@@ -133,6 +133,8 @@ ul{
   .hero-btn{
     font-size: 30px !important;
   }
+
+  
 
   
 }
