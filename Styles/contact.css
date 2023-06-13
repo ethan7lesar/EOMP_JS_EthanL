@@ -37,9 +37,9 @@ a {
   text-decoration: none !important;
 }
 
-ul {
+/* ul {
   list-style: none !important;
-}
+} */
 
 .admin-btn {
   color: #192a51 !important;
@@ -54,9 +54,11 @@ ul {
   border-radius: 0;
   width: 400px !important;
   border-radius: 0 !important;
+  
 }
 
-input {
+
+input{
   border: none !important;
   background-color: #f5e6e8;
   border-radius: 0 !important;
