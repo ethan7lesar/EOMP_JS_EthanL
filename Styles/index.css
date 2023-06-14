@@ -134,3 +134,10 @@ a{
 
   
 }
+
+
+.nav-link:hover{
+  position: relative;
+  border: #F5E6E8 3px solid;
+  transition: 0.3s;
+}
