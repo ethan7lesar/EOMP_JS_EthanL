@@ -1,4 +1,4 @@
-const products = [
+const products =  [
     {
       id: 1,
       catergory: "rolex",
@@ -142,6 +142,7 @@ const products = [
   
   function displayProducts(products) {
     const ourProducts = document.getElementById("products");
+       
     ourProducts.innerHTML = ""; 
     products.forEach((product) => {
       const productElement = document.createElement("div");
