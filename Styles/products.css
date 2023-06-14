@@ -118,6 +118,21 @@ a{
       width: 75% !important;
       height: 75% !important;
     } */
+    #product-imgs {
+      width: 150px !important;
+      height: 190px !important;
+  }
+  .addbtn{
+    font-size: 10px !important;
+  }
+
+    .products{
+      width: 170px !important;
+      display: grid !important;
+      justify-content: center !important;
+      font-size: 10px !important;
+
+    }
   
     .contact-text{
       display: none !important;
