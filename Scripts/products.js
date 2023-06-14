@@ -1,4 +1,4 @@
-const products = [
+const products = JSON.parse(localStorage.getItem("products")) || [
     {
       id: 1,
       catergory: "rolex",
@@ -232,7 +232,8 @@ categoryButtons.forEach((button) => {
   }
 
 
-
+  
+  localStorage.setItem("products", JSON.stringify(products));
   displayProducts(products);
   
   updateCart();
