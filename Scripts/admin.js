@@ -204,8 +204,119 @@
 //       ourProducts.appendChild(productElement);
 //     });
 //   }
+// let array2 = JSON.parse(localStorage.getItem("products")) 
+// if  (!array2){
+//   array2 = [];
+// };
 
-let array2 = JSON.parse(localStorage.getItem("Products ")) ||  [];
+// function addObject() {
+//   let Value = {
+//     id: document.getElementById("Id").value,
+//     catergory: document.getElementById("catergory").value,
+//     Image: document.getElementById("Image").value,
+//     name: document.getElementById("name").value,
+//     price: document.getElementById("price").value,
+//     quantity: document.getElementById("quantity").value,
+ 
+//   };
+//   array2.push(Value);
+//   //   document.getElementById("display1").innerHTML += Object.values(Value);
+//   console.log(array2);
+//   function display1(){
+
+//   }
+// }
+
+// function display() {
+
+//   let table = document.querySelector(".tableInfo");
+//   table.innerHTML = "";
+//   array2.forEach((data) => {
+//     table.innerHTML += `
+//     <tbody>
+//     <tr>
+//       <td>${data.id}</td>
+//       <td>${data.catergory}</td>
+//       <td>${data.Image}</td>
+//       <td>${data.name}</td>
+//       <td>${data.price}</td>
+//       <td>${data.quantity}</td>
+//        <td><button>Edit</button><button>Delete</button></td>
+//     </tr>
+//     <tr>
+//     </tbody>
+//     `;
+//   });
+// }
+
+// display();
+
+
+// localStorage.setItem("products", JSON.stringify(products));
+// function clear
+// function restart() {
+//   window.location.reload();
+// }
+
+// let array2 = JSON.parse(localStorage.getItem("products"));
+// if (!array2) {
+//   array2 = [];
+// }
+
+// function addObject() {
+//   let Value = {
+//     id: document.getElementById("Id").value,
+//     catergory: document.getElementById("catergory").value,
+//     Image: document.getElementById("Image").value,
+//     name: document.getElementById("name").value,
+//     price: document.getElementById("price").value,
+//     quantity: document.getElementById("quantity").value,
+//   };
+//   if (Value){
+//     array2.push(Value);
+//     localStorage.setItem("products", JSON.stringify(array2));
+//     console.log(array2);
+//     window.location.reload();
+
+//   } else {
+//     alert("Please add something")
+//   }
+
+
+
+// }
+
+// function display() {
+//   let table = document.querySelector(".tableInfo");
+//   table.innerHTML = "";
+//   array2.forEach((data) => {
+//     table.innerHTML += `
+//       <tbody>
+//         <tr>
+//           <td>${data.id}</td>
+//           <td>${data.catergory}</td>
+//           <td>${data.Image}</td>
+//           <td>${data.name}</td>
+//           <td>${data.price}</td>
+//           <td>${data.quantity}</td>
+//           <td><button>Edit</button><button>Delete</button></td>
+//         </tr>
+//       </tbody>
+//     `;
+//   });
+  
+// }
+
+// display();
+
+//localStorage.setItem("products", JSON.stringify(products));
+
+
+let array2 = JSON.parse(localStorage.getItem("products"));
+if (!array2) {
+  array2 = [];
+}
+
 function addObject() {
   let Value = {
     id: document.getElementById("Id").value,
@@ -214,31 +325,120 @@ function addObject() {
     name: document.getElementById("name").value,
     price: document.getElementById("price").value,
     quantity: document.getElementById("quantity").value,
- 
   };
   array2.push(Value);
-  //   document.getElementById("display1").innerHTML += Object.values(Value);
+  localStorage.setItem("products", JSON.stringify(array2));
   console.log(array2);
+  displayRow(Value);
+}
+
+function display() {
   let table = document.querySelector(".tableInfo");
   table.innerHTML = "";
   array2.forEach((data) => {
     table.innerHTML += `
-    <tbody>
-    <tr>
-      <td>${data.id}</td>
-      <td>${data.catergory}</td>
-      <td>${data.Image}</td>
-      <td>${data.name}</td>
-      <td>${data.price}</td>
-      <td>${data.quantity}</td>
-       <td><button>Edit</button><button>Delete</button></td>
-    </tr>
-    <tr>
-    </tbody>
+      <tbody>
+        <tr>
+          <td>${data.id}</td>
+          <td>${data.catergory}</td>
+          <td>${data.Image}</td>
+          <td>${data.name}</td>
+          <td>${data.price}</td>
+          <td>${data.quantity}</td>
+          <td>
+            <button onclick="editObject(this)">Edit</button>
+            <button onclick="deleteObject(this)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
     `;
   });
 }
-// function clear
-// function restart() {
-//   window.location.reload();
-// }
+
+function displayRow(data) {
+  let table = document.querySelector(".tableInfo");
+  let newRow = document.createElement("tr");
+  newRow.innerHTML = `
+    <td>${data.id}</td>
+    <td>${data.catergory}</td>
+    <td>${data.Image}</td>
+    <td>${data.name}</td>
+    <td>${data.price}</td>
+    <td>${data.quantity}</td>
+    <td>
+      <button onclick="editObject(this)">Edit</button>
+      <button onclick="deleteObject(this)">Delete</button>
+    </td>
+  `;
+  table.appendChild(newRow);
+}
+
+function deleteObject(button) {
+  let row = button.parentNode.parentNode;
+  let index = Array.from(row.parentNode.children).indexOf(row);
+  array2.splice(index, 1);
+  localStorage.setItem("products", JSON.stringify(array2));
+  row.remove();
+}
+
+function editObject(){
+  let row = button.parentNode.parentNode;
+  let index = Array.from(row.parentNode.children).indexOf(row);
+  let product = array2[index]
+
+  document.getElementById("id").value = product.id
+  document.getElementById("catergory").value = product.id
+  document.getElementById("Image").value = product.id
+  document.getElementById("name").value = product.id
+  document.getElementById("price").value = product.id
+  document.getElementById("quantity").value = product.id
+  
+  let saveButton = document.createElement("button");
+  saveButton.textContent = "Save";
+  saveButton.onclick = function () {
+    saveChanges(index);
+
+
+  };
+
+  let cancelButton = document.createElement("button");
+    cancelButton.textContent = "Cancel";
+    cancelButton.onclick = function () {
+      cancelEdit(row, product);
+    };
+    let cell = row.lastElementChild;
+    cell.innerHTML = "";
+    cell.appendChild(saveButton);
+    cell.appendChild(cancelButton);
+  }
+
+  function saveChanges(index){
+  let editedProduct = new Product(
+    document.getElementById("Id").value,
+    document.getElementById("category").value,
+    document.getElementById("Image").value,
+    document.getElementById("name").value,
+    document.getElementById("price").value,
+    document.getElementById("quantity").value
+  )
+  array2[index] = editedProduct;
+  localStorage.setItem("products", JSON.stringify(array2));
+  display();
+
+  }
+  function cancelEdit(row, product) {
+    let cell = row.lastElementChild;
+    cell.innerHTML = `
+      <button onclick="editObject(this)">Edit</button>
+      <button onclick="deleteObject(this)">Delete</button>
+    `;
+  
+    document.getElementById("Id").value = "";
+    document.getElementById("category").value = "";
+    document.getElementById("Image").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("quantity").value = "";
+  }
+
+display();

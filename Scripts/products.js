@@ -1,4 +1,4 @@
-const products =  [
+const products = JSON.parse(localStorage.getItem("products")) || [
     {
       id: 1,
       catergory: "rolex",
@@ -218,7 +218,7 @@ categoryButtons.forEach((button) => {
     //   let price = Number(product.price.replace("$", ""));
     //   return accumulate = price * quantity;
     // }, 0);
-    totalElement.textContent = `$${total}`;
+    totalElement.textContent = `R${total}`;
   }
   
   function checkout() {
@@ -232,8 +232,7 @@ categoryButtons.forEach((button) => {
     updateCart();
   }
 
-
-
+  localStorage.setItem("products", JSON.stringify(products));
   displayProducts(products);
   
   updateCart();

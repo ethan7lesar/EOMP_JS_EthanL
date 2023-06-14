@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  font-family: "Righteous", cursive;
+}
+body {
+  background-color: #967aa1 !important;
+}
+
 tr{
     border: 2px solid black;
 }
@@ -7,7 +16,7 @@ text-align: center;
 }
 table {
     border: solid black;
-    width:  100%;
+    width:  100% !important;
     text-align: center !;
 }
 th {
