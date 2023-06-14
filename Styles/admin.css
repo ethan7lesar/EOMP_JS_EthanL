@@ -23,3 +23,13 @@ th {
     border: solid black !important;
 }
 
+button{
+  color: #F5E6E8 ;
+  border: none;
+  background-color: #192a51;
+}
+
+.form{
+  margin-left: 400px !important;
+}
+
