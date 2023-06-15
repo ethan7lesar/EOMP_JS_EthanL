@@ -149,3 +149,12 @@ function handleFormSubmit(event) {
     console.error('An error occurred while submitting the form:', error);
   }
 }
+
+function clearData(){
+  document.getElementById("Id").value = "";
+  document.getElementById("catergory").value = "";
+  document.getElementById("Image").value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("price").value = "";
+  document.getElementById("quantity").value = "";
+}
