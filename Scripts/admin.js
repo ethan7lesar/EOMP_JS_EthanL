@@ -6,7 +6,7 @@ if (!array2) {
 }
 function addObject() {
     let id = document.getElementById("Id").value;
-    let category = document.getElementById("category").value;
+    let catergory = document.getElementById("catergory").value;
     let image = document.getElementById("Image").value;
     let name = document.getElementById("name").value;
     let price = document.getElementById("price").value;
@@ -16,16 +16,12 @@ function addObject() {
     if (id === "" || category === "" || image === "" || name === "" || price === "" || quantity === "") {
       alert("Please fill in all the required fields.");
       return;
-    } else if (id < 1 || category === "" || image == " http" || name === "" || price < 1 || quantity < 1){
-        alert("Please fill in all the required fields.");
-        return;
-    }
-
+    } 
 
   
     let Value = {
       id: id,
-      category: category,
+      catergory: catergory,
       Image: image,
       name: name,
       price: price,
@@ -66,3 +62,31 @@ function deleteObject(button) {
 }
 
 display();
+
+function handleFormSubmit(event) {
+  try {
+    event.addObject();
+
+    // Get form values
+    const name = event.target.name.value;
+    const catergory = event.target.catergory.value;
+    const price = parseFloat(event.target.price.value);
+
+    // Create new product object
+    const newProduct = {
+      id: products.length + 1,
+      name: name,
+      catergory: catergory,
+      price: price
+    };
+
+    // Add the new product to the array and update local storage
+    products.push(newProduct);
+    localStorage.setItem('products', JSON.stringify(products));
+
+    // Show product page to reflect the updated list
+    display();
+  } catch (error) {
+    console.error('An error occurred while submitting the form:', error);
+  }
+}
