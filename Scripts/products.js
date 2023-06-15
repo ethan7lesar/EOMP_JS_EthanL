@@ -142,6 +142,7 @@ const products = JSON.parse(localStorage.getItem("products")) || [
   
   function displayProducts(products) {
     const ourProducts = document.getElementById("products");
+       
     ourProducts.innerHTML = ""; 
     products.forEach((product) => {
       const productElement = document.createElement("div");
@@ -217,7 +218,7 @@ categoryButtons.forEach((button) => {
     //   let price = Number(product.price.replace("$", ""));
     //   return accumulate = price * quantity;
     // }, 0);
-    totalElement.textContent = `$${total}`;
+    totalElement.textContent = `R${total}`;
   }
   
   function checkout() {
@@ -232,7 +233,6 @@ categoryButtons.forEach((button) => {
   }
 
 
-  
   localStorage.setItem("products", JSON.stringify(products));
   displayProducts(products);
   
