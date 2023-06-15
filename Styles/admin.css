@@ -6,6 +6,16 @@
 body {
   background-color: #967aa1 !important;
 }
+.NAV {
+  background-color: #192a51 !important ;
+}
+
+.nav-link {
+  color: #f5e6e8 !important;
+  padding-left: 50px !important ;
+  padding-right: 50px !important;
+  font-size: 20px !important;
+}
 
 tr{
     border: 2px solid black;
@@ -33,3 +43,43 @@ button{
   margin-left: 400px !important;
 }
 
+.navbar-toggler{display: none !important;}
+
+@media screen and (max-width: 300px) {
+    .card-img-top{
+      width: 75% !important;
+      height: 75% !important;
+    }
+  
+    .contact-text{
+      display: none !important;
+    }
+  
+    ul{
+      display: none !important;
+    }
+    .navbar-toggler{
+      display: inline !important;
+       color: #F5E6E8 !important;
+    }
+  
+  .d-inline-block.align-text-top.Logo{
+    display: none !important;  
+    }
+    .hero-text{
+      font-size: 40px !important;
+    }
+    .hero-btn{
+      font-size: 30px !important;
+    }
+   .contact{
+    width: 300px !important;
+   }
+    
+  }
+
+  .nav-link:hover{
+    position: relative;
+    border: #F5E6E8 3px solid;
+    transition: 0.3s;
+  }
