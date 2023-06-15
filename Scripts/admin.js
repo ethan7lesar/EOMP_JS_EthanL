@@ -5,15 +5,15 @@ if (!array2) {
   array2 = [];
 }
 function addObject() {
-    let id = document.getElementById("Id").value;
-    let catergory = document.getElementById("catergory").value;
-    let image = document.getElementById("Image").value;
-    let name = document.getElementById("name").value;
-    let price = document.getElementById("price").value;
-    let quantity = document.getElementById("quantity").value;
   
+  let id = document.getElementById("Id").value;
+  let catergory = document.getElementById("catergory").value;
+  let image = document.getElementById("Image").value;
+  let name = document.getElementById("name").value;
+  let price = document.getElementById("price").value;
+  let quantity = document.getElementById("quantity").value;
 
-    if (id === "" || category === "" || image === "" || name === "" || price === "" || quantity === "") {
+    if (id === "" || catergory === "" || image === "" || name === "" || price === "" || quantity === "") {
       alert("Please fill in all the required fields.");
       return;
     } 
@@ -59,6 +59,22 @@ function deleteObject(button) {
   array2.splice(index, 1);
   localStorage.setItem("products", JSON.stringify(array2));
   row.remove();
+}
+
+function editObject(button) {
+   id = `${data.id}`;
+   catergory =`${data.id}`;
+   image =`${data.id}` ;
+   name =`${data.id}` ;
+   price = `${data.id}`;
+   quantity = `${data.id}`;
+
+   
+  
+   array2.splice(index, 1);
+  localStorage.setItem("products", JSON.stringify(array2));
+  array2.push(index,1);
+  
 }
 
 display();
