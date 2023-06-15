@@ -5,31 +5,35 @@ if (!array2) {
   array2 = [];
 }
 function addObject() {
+  try{
+    let id = document.getElementById("Id").value;
+    let catergory = document.getElementById("catergory").value;
+    let image = document.getElementById("Image").value;
+    let name = document.getElementById("name").value;
+    let price = document.getElementById("price").value;
+    let quantity = document.getElementById("quantity").value;
   
-  let id = document.getElementById("Id").value;
-  let catergory = document.getElementById("catergory").value;
-  let image = document.getElementById("Image").value;
-  let name = document.getElementById("name").value;
-  let price = document.getElementById("price").value;
-  let quantity = document.getElementById("quantity").value;
-
-    if (id === "" || catergory === "" || image === "" || name === "" || price === "" || quantity === "") {
-      alert("Please fill in all the required fields.");
-      return;
-    } 
-
+      if (id === "" || catergory === "" || image === "" || name === "" || price === "" || quantity === "") {
+        alert("Please fill in all the required fields.");
+        return;
+      } 
   
-    let Value = {
-      id: id,
-      catergory: catergory,
-      Image: image,
-      name: name,
-      price: price,
-      quantity: quantity,
-    };
-    array2.push(Value);
-    localStorage.setItem("products", JSON.stringify(array2));
-    display();
+    
+      let Value = {
+        id: id,
+        catergory: catergory,
+        Image: image,
+        name: name,
+        price: price,
+        quantity: quantity,
+      };
+      array2.push(Value);
+      localStorage.setItem("products", JSON.stringify(array2));
+      display();
+
+  }catch(error){
+    console.log("Error");
+  }
 }
 function display() {
   let table = document.querySelector(".tableInfo");
@@ -99,24 +103,31 @@ function editObject(id) {
 }
 
 function saveData() {
-  let Id = document.getElementById("Id").value
-  let catergory = document.getElementById("catergory").value
-  let Image = document.getElementById("Image").value
-  let name = document.getElementById("name").value
-  let price = document.getElementById("price").value
-  let quantity = document.getElementById("quantity").value
+  try {
 
-  let product = array2.find((item) => item.id == Id)
-  product.catergory = catergory
-  product.image = Image
-  product.name = name
-  product.price = price
-  product.quantity = quantity
 
-  array2.splice(Id -1, 1, product)
+    let Id = document.getElementById("Id").value
+    let catergory = document.getElementById("catergory").value
+    let Image = document.getElementById("Image").value
+    let name = document.getElementById("name").value
+    let price = document.getElementById("price").value
+    let quantity = document.getElementById("quantity").value
+  
+    let product = array2.find((item) => item.id == Id)
+    product.catergory = catergory
+    product.image = Image
+    product.name = name
+    product.price = price
+    product.quantity = quantity
+  
+    array2.splice(Id -1, 1, product)
+  
+    localStorage.setItem("products", JSON.stringify(array2))
+    display();
+  }catch(error){
+    alert("values are not correct")
+  }
 
-  localStorage.setItem("products", JSON.stringify(array2))
-  display();
 }
 
 
