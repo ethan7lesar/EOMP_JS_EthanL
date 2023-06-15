@@ -86,7 +86,7 @@ function editObject(button) {
  document.getElementById("catergory").value = array2[index].catergory
  document.getElementById("id").value = array2[index].id
  document.getElementById("id").value = array2[index].id
-  document.getElementById("id").value = array2[index].id
+ document.getElementById("id").value = array2[index].id
  document.getElementById("id").value = array2[index].id
 
 
