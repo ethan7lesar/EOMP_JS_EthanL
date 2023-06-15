@@ -232,6 +232,7 @@ categoryButtons.forEach((button) => {
     updateCart();
   }
 
+
   localStorage.setItem("products", JSON.stringify(products));
   displayProducts(products);
   
