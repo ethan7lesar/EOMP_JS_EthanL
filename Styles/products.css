@@ -39,6 +39,7 @@ a{
 #product-imgs {
     width: 256px !important;
     height: 300px !important;
+   
 }
 
 /* ul {
@@ -192,3 +193,8 @@ a{
    background-color: transparent !important;
    transition: 0.6s;
   }
+
+  #product-imgs{
+    scale: 0.75 !important;
+  }
+

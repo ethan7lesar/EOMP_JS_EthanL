@@ -159,12 +159,12 @@ const products = JSON.parse(localStorage.getItem("products")) || [
     });
   }
 
-  function sortProductsByCategory(category) {
+function sortProductsByCategory(category) {
     const sortedProducts = products.filter((product) => product.catergory === category);
     displayProducts(sortedProducts);
   }
   
-  const categoryButtons = document.querySelectorAll(".category-button");
+const categoryButtons = document.querySelectorAll(".category-button");
 
 categoryButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -214,10 +214,7 @@ categoryButtons.forEach((button) => {
     cart.forEach((item) => {
       total += eval(item.price);
     });
-    // let total = cart.reduce((accumulate, product) => {
-    //   let price = Number(product.price.replace("$", ""));
-    //   return accumulate = price * quantity;
-    // }, 0);
+ 
     totalElement.textContent = `R${total}`;
   }
   
