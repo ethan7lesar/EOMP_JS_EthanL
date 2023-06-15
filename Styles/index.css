@@ -45,7 +45,9 @@ body {
  border: none;
  /* mix-blend-mode: difference !important; */
 }
-
+ .featured-brands{
+  color: #192a51;
+ }
 
 
 
@@ -93,10 +95,49 @@ a{
   text-decoration: none !important;
 }
 
-ul{
-  list-style: none !important;
-}
 
 .admin-btn{
   color: #192a51 !important;
+}
+
+.navbar-toggler{
+  display: none !important;
+}
+
+@media screen and (max-width: 300px) {
+  ul{
+    list-style: none !important;
+  }
+  .card-img-top{
+    width: 75% !important;
+    height: 75% !important;
+  }
+
+  .contact-text{
+    display: none !important;
+  }
+
+  ul{
+    display: none !important;
+  }
+  .navbar-toggler{
+    display: inline !important;
+     color: #F5E6E8 !important;
+  }
+
+.d-inline-block.align-text-top.Logo{
+  display: none !important;  
+  }
+
+
+  
+
+  
+}
+
+
+.nav-link:hover{
+  position: relative;
+  border: #F5E6E8 3px solid;
+  transition: 0.3s;
 }
