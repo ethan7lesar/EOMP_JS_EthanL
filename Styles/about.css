@@ -56,3 +56,49 @@ footer {
     padding: 10px 10px;
     border: transparent 10px solid;
   }
+
+
+.navbar-toggler{
+  display: none !important;
+}
+  @media screen and (max-width: 300px) {
+    ul{
+      list-style: none !important;
+    }
+    .card-img-top{
+      width: 75% !important;
+      height: 75% !important;
+    }
+  
+    .contact-text{
+      display: none !important;
+    }
+  
+    ul{
+      display: none !important;
+    }
+    .navbar-toggler{
+      display: inline !important;
+       color: #F5E6E8 !important;
+    }
+  
+  .d-inline-block.align-text-top.Logo{
+    display: none !important;  
+    }
+    .hero-text{
+      font-size: 40px !important;
+    }
+    .hero-btn{
+      font-size: 30px !important;
+    }
+  
+    
+  
+    
+  }
+
+  .nav-link:hover{
+    position: relative;
+    border: #F5E6E8 3px solid;
+    transition: 0.3s;
+  }

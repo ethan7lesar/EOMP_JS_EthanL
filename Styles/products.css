@@ -93,8 +93,9 @@ a{
   }
 
   .Filter{
-    position: relative !important;
+    position: absolute !important;
     left: 35%!important;
+
     
     color: #f5e6e8;
     border-radius: 0 !important;
@@ -158,7 +159,7 @@ a{
    .contact{
     width: 300px !important;
    }
-    
+  
   }
 
   @media screen and (max-width: 700px) {
@@ -175,4 +176,19 @@ a{
     }
 
 
+  }
+  .nav-link:hover{
+    position: relative;
+    border: #F5E6E8 3px solid;
+    transition: 0.3s;
+  }
+
+  #product-img:hover{
+    border: #192a51 2px solid ;
+  }
+
+  .addbtn:hover{
+   color: #192a51;
+   background-color: transparent !important;
+   transition: 0.6s;
   }
