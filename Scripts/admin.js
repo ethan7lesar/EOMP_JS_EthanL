@@ -62,18 +62,34 @@ function deleteObject(button) {
 }
 
 function editObject(button) {
-   id = `${data.id}`;
-   catergory =`${data.id}`;
-   image =`${data.id}` ;
-   name =`${data.id}` ;
-   price = `${data.id}`;
-   quantity = `${data.id}`;
+  //  id = `${data.id}`;
+  //  catergory =`${data.id}`;
+  //  image =`${data.id}` ;
+  //  name =`${data.id}` ;
+  //   price = `${data.id}`;
+  //  quantity = `${data.id}`;
 
-   
+
   
-   array2.splice(index, 1);
-  localStorage.setItem("products", JSON.stringify(array2));
-  array2.push(index,1);
+  //  array2.splice(index, 1);
+  // localStorage.setItem("products", JSON.stringify(array2));
+  // array2.push(index,1);
+
+  let editedObj;
+  if(localStorage.getItem("products")){
+    editedObj = [];
+  } else {
+    editedObj = JSON.parse(localStorage.getItem("products"))
+  }
+
+ document.getElementById("id").value = array2[index].id
+ document.getElementById("catergory").value = array2[index].catergory
+ document.getElementById("id").value = array2[index].id
+ document.getElementById("id").value = array2[index].id
+ document.getElementById("id").value = array2[index].id
+ document.getElementById("id").value = array2[index].id
+
+
   
 }
 
